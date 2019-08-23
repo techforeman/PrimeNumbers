@@ -1,0 +1,141 @@
+<div class="wrapper">
+    <div class="page-header clear-filter" filter-color="orange">
+        <div class="page-header-image rellax-header" data-rellax-speed="-7"
+            style="background-image: url('assets/img/header.jpg');">
+
+        </div>
+        <div class="container">
+            <div class="content-center brand">
+                <img class="n-logo" src="assets/img/logoapp.png" alt="">
+                <h1 class="title">Liczby Pierwsze</h1>
+
+                <br>
+                <br>
+                <app-basicelements></app-basicelements>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main">
+        <!--   <div class="section section-images">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hero-images-container">
+                        <img src="assets/img/2.jpg" alt="">
+                    </div>
+                    <div class="hero-images-container-1">
+                        <img src="assets/img/3.jpg" alt="">
+                    </div>
+                    <div class="hero-images-container-2">
+                        <img src="assets/img/7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+        <!--  <app-navigation></app-navigation> -->
+        <div class="section section-tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 ml-auto col-xl-12 mr-auto">
+                        <p class="category">Lista zapisanych wyników</p>
+                        <!-- Tabs with Background on Card -->
+                        <div class="card">
+                            <div class="nav-tabs-navigation" data-tabs-color="orange">
+                                <div class="nav-tabs-wrapper">
+                                    <ngb-tabset [justify]="'center'" class="text-center">
+                                        <ngb-tab title="XML">
+                                            <ng-template ngbTabContent>
+                                                <table class="table">
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">ID</th>
+                                                        <th scope="col">Min</th>
+                                                        <th scope="col">Max</th>
+                                                        <th scope="col">Liczby</th>
+                                                        <th scope="col">Użytkownik</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <tr *ngFor="let res of all_sql_results; index as i">
+                                                            <th scope="row">{{res.id}}</th>
+                                                            <td>{{res.minRangeData}}</td>
+                                                            <td>{{res.maxRangeData}}</td>
+                                                            <td>{{res.resultValues}}</td>
+                                                            <td>{{res.userName}}</td>
+                                        
+                                                          </tr>
+                                                    </tbody>
+                                                  </table>
+                                            </ng-template>
+                                        </ngb-tab>
+                                        <ngb-tab title="SQLlite">
+                                            <ng-template ngbTabContent>
+                                                <table class="table">
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">ID</th>
+                                                        <th scope="col">Min</th>
+                                                        <th scope="col">Max</th>
+                                                        <th scope="col">Liczby</th>
+                                                        <th scope="col">Użytkownik</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr *ngFor="let res of all_sql_results; index as i">
+                                                        <th scope="row">{{res.id}}</th>
+                                                        <td>{{res.minRangeData}}</td>
+                                                        <td>{{res.maxRangeData}}</td>
+                                                        <td>{{res.resultValues}}</td>
+                                                        <td>{{res.userName}}</td>
+                                    
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                            </ng-template>
+                                        </ngb-tab>
+                                        
+                                    </ngb-tabset>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Tabs on plain Card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="section section-signup"
+            style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 content-center ml-auto mr-auto">
+                      
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer" data-background-color="black">
+        <div class="container">
+
+            <a href="https://www.robertjanczak.pl">
+                www.robertjanczak.pl
+            </a>
+
+            <div class="copyright">
+                &copy;
+                {{data | date: 'yyyy'}}, Robert Janczak
+            </div>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,12 @@
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\obj\Debug\netcoreapp2.2\LoggerServices.csprojAssemblyReference.cache
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\obj\Debug\netcoreapp2.2\LoggerServices.csproj.CoreCompileInputs.cache
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\obj\Debug\netcoreapp2.2\LoggerServices.AssemblyInfoInputs.cache
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\obj\Debug\netcoreapp2.2\LoggerServices.AssemblyInfo.cs
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\bin\Debug\netcoreapp2.2\LoggerServices.deps.json
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\bin\Debug\netcoreapp2.2\LoggerServices.dll
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\bin\Debug\netcoreapp2.2\LoggerServices.pdb
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\obj\Debug\netcoreapp2.2\LoggerServices.csproj.CopyComplete
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\obj\Debug\netcoreapp2.2\LoggerServices.dll
+C:\Users\K&J\source\repos\Prime Numbers\LoggerServices\obj\Debug\netcoreapp2.2\LoggerServices.pdb

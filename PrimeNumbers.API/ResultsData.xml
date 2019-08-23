@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataResults>
+  <ResultsXML>
+    <ResultXML>
+      <id>1</id>
+      <min_range>2</min_range>
+      <max_range>3</max_range>
+      <result>2; 3;</result>
+      <date_of_start>2019-08-23 12:03:35.2500918</date_of_start>
+      <date_of_end>2019-08-23 12:03:35.4500918</date_of_end>
+    </ResultXML>
+    <ResultXML>
+      <id>2</id>
+      <min_range>2</min_range>
+      <max_range>3</max_range>
+      <result>2; 3;</result>
+      <date_of_start>2019-08-23 12:03:35.2500918</date_of_start>
+      <date_of_end>2019-08-23 12:03:35.4500918</date_of_end>
+    </ResultXML>
+  </ResultsXML>
+</DataResults>  

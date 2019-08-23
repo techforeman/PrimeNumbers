@@ -1,0 +1,9 @@
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\bin\Debug\netcoreapp2.2\Contracts.deps.json
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\obj\Debug\netcoreapp2.2\Contracts.csprojAssemblyReference.cache
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfoInputs.cache
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfo.cs
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\obj\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\K&J\source\repos\Prime Numbers\Contracts\obj\Debug\netcoreapp2.2\Contracts.pdb

@@ -1,0 +1,8 @@
+2019-08-21 07:23:11.7645 INFO Test Log Info
+2019-08-21 07:23:56.0065 INFO Test Log Info
+2019-08-21 12:33:08.1997 INFO Took Results from db
+2019-08-21 12:36:42.9602 INFO Took Results from db
+2019-08-21 12:45:19.5128 INFO Took Results from db
+2019-08-21 12:50:59.3563 INFO Took Results from db
+2019-08-21 12:55:34.1883 INFO Took Results from db
+2019-08-21 12:57:44.0733 INFO Took Results from db
