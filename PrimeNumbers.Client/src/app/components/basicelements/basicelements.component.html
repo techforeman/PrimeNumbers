@@ -2,9 +2,12 @@
     <div class="container">
             <h3 class="title">Wskaż zakres przeszukiwania</h3>
             
+            
+
+
             <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
                 <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                    <div class="input-group-prepend" >
+                    <div class="input-group-prepend">
                       <span class="input-group-text">
                           <i class="now-ui-icons users_circle-08"></i>
                       </span>
@@ -18,9 +21,24 @@
               <nouislider class="slider slider-primary" [connect]="true" [min]="0" [max]="20000" [step]="1" [(ngModel)]="doubleSlider" [tooltips]="true" (change)="valueChange($event)"> </nouislider>
           </div>
 
+          <div class="col-sm-12">
+            <div class="btn-group row" data-toggle="buttons">
+                <label class="btn btn-primary">
+                  <input type="radio" name="saveTo" value="resultsxml" [(ngModel)]="controlerName"/>
+                  <span>XML</span>
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="saveTo" value="results" [(ngModel)]="controlerName"/>
+                  <span>SQLlite</span>
+                </label>
+              </div>
+          </div>
+          
+
           <button type="submit" class="btn btn-primary" [disabled]="username == ''" (click)="SearchPrimeNumber(content)">
                 Wyszukaj liczb
            </button>
+
       
     </div>
 </div>
@@ -38,23 +56,5 @@
       <button type="button" class="btn btn-light" (click)="CancelCalculation($event)">{{ isCalculating ? 'Anuluj' : 'Zamknij'}}</button>
     </div>
 
-    <div class="row" *ngIf="messages.length > 0">
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Messages</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let message of messages; let i = index">
-                        <td>{{i + 1}}</td>
-                        <td>{{message}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-  </ng-template>
+     </ng-template>
 <!-- /modal.close('Close click') -->

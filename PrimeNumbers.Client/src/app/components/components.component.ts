@@ -15,6 +15,7 @@ import { ApiService } from 'app/api/api.service';
 
 export class ComponentsComponent implements OnInit, OnDestroy {
     all_sql_results: {};
+    all_xml_results: {};
     data : Date = new Date();
 
     state_icon_primary = true;
@@ -46,6 +47,6 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     async GetAllResults()
     {
         this.all_sql_results = await this.apiService.getAllResults();
-        
+        this.all_xml_results = await this.apiService.getAllXmlResults();
     }
 }

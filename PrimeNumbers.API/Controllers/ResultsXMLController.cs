@@ -16,9 +16,9 @@ namespace PrimeNumbers.API.Controllers
     public class ResultsXMLController : ControllerBase
     {
         private ILoggerManager _logger;
-        private IDataXmlService _repository;
+        private IResultsRepositoryXML _repository;
 
-        public ResultsXMLController(ILoggerManager logger, IDataXmlService repository)
+        public ResultsXMLController(ILoggerManager logger, IResultsRepositoryXML repository)
         {
             _logger = logger;
             _repository = repository;
@@ -28,23 +28,31 @@ namespace PrimeNumbers.API.Controllers
         public IActionResult GetAllResults()
         {
             _logger.LogInfo("Took list of results from XML");
-            var results =  _repository.GetResults();
+            var results =  _repository.GetAllResults();
             return Ok(results);
+        }
+
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public IActionResult DeleteResult(int id)
+        {
+           var deletedData = _repository.DeleteResult(id);
+           return Ok(deletedData);
         }
 
         
 
-        /* // POST api/values
+         // POST api/values
         [HttpPost]
-        public async Task<IActionResult> AddResult(int minRange, int maxRange, string username, CancellationToken cancellationToken)
+        public IActionResult AddResult(int minRange, int maxRange, string username, CancellationToken cancellationToken)
         {   
             
-            _logger.LogInfo($"{username} took try to search prime numbers within range {minRange} - {maxRange}");
-            var result = await _repository.AddResult(minRange, maxRange, username, cancellationToken);
+            _logger.LogInfo($"{username} took try to search prime numbers within range {minRange} - {maxRange} using XML controller");
+            var result = _repository.AddResult(minRange, maxRange, username, cancellationToken);
             cancellationToken.ThrowIfCancellationRequested();
              if (!cancellationToken.IsCancellationRequested)
              {
-                 _logger.LogInfo($"{username} receive results: {result.ResultValues}");
+                 _logger.LogInfo($"{username} receive results: {result.ResultValues} using XML controller");
                   return Ok(result);
              }
         
@@ -56,14 +64,5 @@ namespace PrimeNumbers.API.Controllers
             
         }
 
-
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteResult(int id)
-        {
-           var deletedData = await _repository.DeleteResult(id);
-           return Ok(deletedData);
-        }*/
     } 
 }

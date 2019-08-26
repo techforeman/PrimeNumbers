@@ -1,12 +1,16 @@
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
+using PrimeNumbers.API.HubConfig;
 
 namespace PrimeNumbers.API.Controllers.HubConfig
 {
-    public class ProgressHub : Hub
+    public class ProgressHub : Hub, IProgressHub
     {
-        public void SendToAll(string currentNumber)
+        
+
+        public async Task SendToAll(string number)
         {
-            Clients.All.SendAsync("Send", currentNumber);
-        } 
+            await Clients.All.SendAsync("Send", number);
+        }
     }
 }    

@@ -16,6 +16,7 @@ using PrimeNumbers.API.Data;
 using PrimeNumbers.API.Extensions;
 using Microsoft.EntityFrameworkCore;
 using PrimeNumbers.API.Controllers.HubConfig;
+using PrimeNumbers.API.HubConfig;
 
 namespace PrimeNumbers.API
 {
@@ -36,10 +37,12 @@ namespace PrimeNumbers.API
             services.ConfigureIISIntegration();
             services.ConfigureLoggerService();
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddSingleton<IDataXmlService, DataXmlService>();
+            services.AddScoped<IResultsRepositoryXML, ResultsRepositoryXML>();
+            services.AddScoped<IResultsRepository, ResultsRepository>(); 
+            services.AddScoped<IProgressHub, ProgressHub>(); 
             services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddScoped<IResultsRepository, ResultsRepository>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +62,7 @@ namespace PrimeNumbers.API
             app.UseCors("CorsPolicy");
             app.UseStaticFiles();
             app.UseSignalR(routes => 
-            routes.MapHub<ProgressHub>("/progress"));
+                { routes.MapHub<ProgressHub>("/progresstask"); });
             app.UseMvc();
         }
     }

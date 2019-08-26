@@ -7,10 +7,12 @@ namespace PrimeNumbers.API.Data
 {
     public interface IResultsRepositoryXML
     {
-        Task<IEnumerable<Result>> GetAllResults();
-        Task<Result> AddResult(int minRange, int maxRange, string username, CancellationToken cancellationToken);
+        IEnumerable<ResultXml> GetAllResults();
+        ResultXml AddResult(int minRange, int maxRange, string username, CancellationToken cancellationToken);
 
-        Task<Result> DeleteResult(int id);
+        bool DeleteResult(int id);
+
+        void SaveXMLFile();
          
     }
 }

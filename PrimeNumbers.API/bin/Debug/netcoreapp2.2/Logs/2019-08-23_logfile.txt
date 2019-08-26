@@ -382,3 +382,4 @@
 2019-08-23 14:09:50.3116 INFO Took list of results from XML
 2019-08-23 14:10:04.2706 INFO Took list of results from XML
 2019-08-23 14:14:47.2787 INFO Took list of results from db
+2019-08-23 16:19:16.8190 INFO Took list of results from XML

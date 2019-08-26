@@ -34,7 +34,7 @@ namespace PrimeNumbers.API.Data
             string strPrimeValues = "";
             for (int i = minRange; i <= maxRange; i++)
             {
-                 await Task.Delay(100);
+                 //await Task.Delay(100);
                 var isPrime = await CheckIsPrimeAsync(i);
                 if (isPrime==true)
                 {
@@ -68,7 +68,7 @@ namespace PrimeNumbers.API.Data
 
          private async Task<bool> CheckIsPrimeAsync(int number)
         {
-           
+            await Task.Delay(0);
             if (number <= 1) return false;
             if (number == 2) return true;
             if(number % 2 == 0) return false;

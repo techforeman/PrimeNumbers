@@ -19,7 +19,9 @@ namespace PrimeNumbers.API.Extensions
                     builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader()
-                    .AllowCredentials());
+                    .AllowCredentials()
+                    .WithOrigins("http://localhost:4200"));
+                    
             });
         }
 

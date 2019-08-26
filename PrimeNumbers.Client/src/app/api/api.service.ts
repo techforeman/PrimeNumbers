@@ -8,6 +8,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class ApiService {
   apiURL = 'http://localhost:5000/api/';
   controlerName = 'results/';
+  controlerXmlName = 'resultsxml/';
   messageTitle = '';
   messageBody = '';
 
@@ -18,14 +19,25 @@ export class ApiService {
     return await this.httpClient.get(this.apiURL + this.controlerName).toPromise();
   }
 
+  public async getAllXmlResults() {
+    return await this.httpClient.get(this.apiURL + this.controlerXmlName).toPromise();
+  }
+
 
   public deleteResult(id: number) {
     return this.httpClient.delete(this.apiURL + this.controlerName + id + '/');
   }
 
-  public addResults(minRange: number, maxRange: number, username: string) {
+  public addResults(minRange: number, maxRange: number, username: string, controlerName: string) {
+    return this.httpClient.post(this.apiURL + controlerName + '?minRange=' + minRange + '&maxRange=' + maxRange + '&username=' + username, '');
+  }
 
-    return this.httpClient.post('http://localhost:5000/api/results?minRange=' + minRange + '&maxRange=' + maxRange + '&username=' + username, '');
+
+  public startHttpRequest = () => {
+    return this.httpClient.get('https://localhost:5000/progresstask')
+      .subscribe(res => {
+        console.log(res);
+      })
   }
 
 
@@ -57,7 +69,7 @@ export class ApiService {
       this.messageBody = 'Dane przeszukane prawidłowo.';
     }
     return { messageTitle: this.messageTitle, messageBody: this.messageBody };
-  }  
+  }
 }
 
 
