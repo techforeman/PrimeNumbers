@@ -29,16 +29,16 @@ export class BasicelementsComponent implements OnInit {
   all_xml_results: {};
   public async: any;
 
-
-  constructor(private apiService: ApiService, private modalService: NgbModal, public signalRService: SignalRService) { }
+  /* public signalRService: SignalRService */
+  constructor(private apiService: ApiService, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.minRange = this.doubleSlider[0];
     this.maxRange = this.doubleSlider[1];
 
-    this.signalRService.startConnection();
+   /*  this.signalRService.startConnection();
     this.signalRService.addProgressBarDataListener();
-    this.apiService.startHttpRequest();
+    this.apiService.startHttpRequest(); */
 
   }
 
@@ -52,7 +52,7 @@ export class BasicelementsComponent implements OnInit {
   }
 
   SearchPrimeNumber(content) {
-    this.signalRService.sendMessageToHub();
+    /* this.signalRService.sendMessageToHub(); */
     this.currentNumber = 0;
     this.isCalculating = true;
     this.openVerticallyCentered(content);

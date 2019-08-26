@@ -20,7 +20,7 @@ namespace PrimeNumbers.API.Extensions
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials()
-                    .WithOrigins("http://localhost:4200"));
+                    .WithOrigins("http://localhost:4200", "majsterjunior-001-site2.itempurl.com"));
                     
             });
         }
